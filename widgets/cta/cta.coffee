@@ -11,8 +11,9 @@ class Dashing.Cta extends Dashing.Widget
 
       route_class = train['route'].toLowerCase()
 
-      # I'm not going to make it to any train stations in under 5 minutes probably?
-      if time_until_arrival >= 5
+      # I'm not going to make it to any train stations in under 5 minutes probably
+      # also keep it to 6 or less times, 7 fits but cuts it close, 8 doesnt fit
+      if time_until_arrival >= 5 && trains.length < 6
         trains.push {
           route: train['route'],
           destination: train['destination'],
