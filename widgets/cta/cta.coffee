@@ -1,13 +1,24 @@
 class Dashing.Cta extends Dashing.Widget
 
   onData: (data) =>
-    buses = []
+    trains = []
 
-    for bus in data['times']
-      parsed_arrival_time = moment(bus['time'], 'YYYYMMDD HH:mm')
-      arrival_time = parsed_arrival_time.format('h:mm')
+    for train in data['times']
+      parsed_arrival_time = moment(train['time'], 'YYYYMMDD HH:mm')
+      arrival_time = parsed_arrival_time.format('h:mm a')
 
       time_until_arrival = parsed_arrival_time.diff(moment(), 'minutes')
 
-      buses.push { route: bus['route'], arrival_time: arrival_time, time_until_arrival: time_until_arrival }
-    @set('buses', buses)
+      route_class = train['route'].toLowerCase()
+
+      # I'm not going to make it to any train stations in under 5 minutes probably?
+      if time_until_arrival >= 5
+        trains.push {
+          route: train['route'],
+          destination: train['destination'],
+          station: train['station'],
+          route_class: route_class
+          arrival_time: arrival_time,
+          time_until_arrival: time_until_arrival
+        }
+    @set('trains', trains)

@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #ec663c;
+$background-color:  #333;
 
 $title-color:       rgba(255, 255, 255, 1);
 $subtitle-color:    rgba(255, 255, 255, 0.7);
@@ -34,17 +34,31 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     color: $moreinfo-color;
   }
 
-  .bus {
-    height: 100%;
-    .route {
-      font-size: 4.0em;
+  .train {
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+
+    .red {
+      color: #dc5945;
+    }
+
+    .pink {
+      color: #dc44d1;
+    }
+
+    .route-holder {
+      font-size: 1.0em;
       width: 55%;
       float: left;
-      padding-top: 0;
+      padding-top: 17px;
+
+      .station {
+        font-size: 1.3em;
+      }
     }
 
     .times {
-      margin-top: 13px;
       width: 45%;
       float: left;
       height: 100%;

@@ -1,6 +1,11 @@
-<div class="buses">
-  <div data-foreach-e='buses' class='bus'>
-    <div data-bind="e.route" class='route'></div>
+<div class="trains">
+  <div data-foreach-e='trains' class='train'>
+    <div data-bind-class="e.route_class">
+      <div class='route-holder'>
+        <div data-bind="e.station" class='station'></div>
+        <div data-bind="e.destination" class='destination'></div>
+      </div>
+    </div>
     <div class='times'>
       <div class='time-until-arrival'>
         <div data-bind="e.time_until_arrival" class='time-label'></div>
