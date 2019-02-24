@@ -10,11 +10,12 @@ class Dashing.Instadash extends Dashing.Widget
     @currentIndex = 0
 
   startCarousel: ->
-    setInterval(@nextPhoto, 300000)
+    setInterval(@nextPhoto, 180000)
 
   photos = [
       "https://source.unsplash.com/610x730/?chicago",
-      "https://source.unsplash.com/610x730/?telluride"
+      "https://source.unsplash.com/610x730/?telluride",
+      "https://source.unsplash.com/610x730/?mountain"
   ]
 
   nextPhoto: =>
