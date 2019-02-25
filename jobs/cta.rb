@@ -47,7 +47,7 @@ SCHEDULER.every '60s', :first_in => 0  do |job|
   harrison_red_line = 41490
   times = get_and_add_to_train_times(times, harrison_red_line)
   harold_washington = 40850
-  times = get_and_add_to_train_times(times, harold_washington, "pink", "Harold Wsh.")
+  times = get_and_add_to_train_times(times, harold_washington, "pink", "Harold Wsh")
 
   times = times.sort_by { |time| time[:time] }
 

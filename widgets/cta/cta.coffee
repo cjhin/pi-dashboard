@@ -5,7 +5,7 @@ class Dashing.Cta extends Dashing.Widget
 
     for train in data['times']
       parsed_arrival_time = moment(train['time'], 'YYYYMMDD HH:mm')
-      arrival_time = parsed_arrival_time.format('h:mm a')
+      arrival_time = parsed_arrival_time.format('h:mma')
 
       time_until_arrival = parsed_arrival_time.diff(moment(), 'minutes')
 

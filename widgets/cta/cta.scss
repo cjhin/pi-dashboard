@@ -48,39 +48,42 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     }
 
     .route-holder {
-      font-size: 1.0em;
-      width: 55%;
+      font-size: 0.7em;
+      width: 65%;
       float: left;
       padding-top: 17px;
 
-      .station {
-        font-size: 1.3em;
+      .destination {
+        font-size: 1.9em;
       }
     }
 
     .times {
-      width: 45%;
+      width: 30%;
       float: left;
       height: 100%;
+      padding-right: 5%;
 
       .arrival-time {
-        font-size: 1em;
-        float: left;
+        font-size: 0.9em;
+        float: right;
         color: $subtitle-color;
-        margin: -9px 0 0 6px;
+        margin: -7px 0 0 6px;
       }
 
       .time-until-arrival {
         width: 100%;
         float: left;
+
         .time-label {
-          font-size: 2.5em;
-          float: left;
+          font-size: 2.4em;
+          float: right;
         }
 
         .min-label {
           margin: 32px 0 0 3px;
-          float: left;
+          font-size: 0.8em;
+          float: right;
           color: $subtitle-color;
         }
       }

@@ -2,14 +2,14 @@
   <div data-foreach-e='trains' class='train'>
     <div data-bind-class="e.route_class">
       <div class='route-holder'>
-        <div data-bind="e.station" class='station'></div>
         <div data-bind="e.destination" class='destination'></div>
+        <div data-bind="e.station" class='station'></div>
       </div>
     </div>
     <div class='times'>
       <div class='time-until-arrival'>
-        <div data-bind="e.time_until_arrival" class='time-label'></div>
         <div class='min-label'>min</div>
+        <div data-bind="e.time_until_arrival" class='time-label'></div>
       </div>
       <div data-bind="e.arrival_time" class='arrival-time'></div>
     </div>
